@@ -84,7 +84,7 @@ const Events = ({ events, ...otherProps }) => {
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
-  const res = await fetch("http://127.0.0.1:8000/api/events/");
+  const res = await fetch("http://13.127.85.83/api/events/");
   const events = await res.json();
 
   // By returning { props: { events } }, the component
