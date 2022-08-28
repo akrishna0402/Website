@@ -13,7 +13,7 @@ export default function Home({ sponsers }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://127.0.0.1:8000/api/gallery/")
+    fetch("http://13.127.85.83/api/gallery/")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -133,7 +133,7 @@ export default function Home({ sponsers }) {
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
-  const res = await fetch("http://127.0.0.1:8000/api/sponsers/");
+  const res = await fetch("http://13.127.85.83/api/sponsers/");
   const sponsers = await res.json();
 
   // By returning { props: { events } }, the component
