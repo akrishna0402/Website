@@ -50,7 +50,7 @@ function Team({ teams }) {
 export default Team;
 
 export async function getStaticProps() {
-  const res = await fetch("http://127.0.0.1:8000/api/student/");
+  const res = await fetch("http://13.127.85.83/api/student/");
   const teams = await res.json();
   // const res2 = await fetch("http://127.0.0.1:8000/api/alumni/");
   // const alumni = await res2.json();
