@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
     setSending(true);
     try {
-      let res = await fetch("http://127.0.0.1:8000/api/contact", {
+      let res = await fetch("http://13.127.85.83/api/contact", {
         method: "POST",
         body: JSON.stringify({
           name: name,
