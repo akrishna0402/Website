@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import navigation from "../data"; 
 import Footer from '../components/Footer';
 import AlumniSection from "../components/Alumni/AlumniSection";
-import Title from "../components/Title"
+import Link from "next/link";
 import Loader from "../components/loader/Loader";
 
 function Alumni({alumni}) {
@@ -44,13 +44,13 @@ function Alumni({alumni}) {
     <div style={styles} >
       <Header items={navigation} navPosition="right" home={false} />
       <div className="flex justify-center align-center text-center ">
-        <a href="/team">
+        <Link href="/team">
           <h1 className=" text-3xl font-semibold flex text-center items-center justify-center" >TEAM</h1>
-        </a>
+        </Link>
         <h1 className="text-2xl flex items-center justify-center mx-6"> / </h1>
-        <a href="/alumni">
+        <Link href="/alumni">
         <h1 className="text-blue-600 text-3xl font-semibold flex text-center items-center justify-center underline decoration-1 decoration-black underline-offset-8" >ALUMNI</h1>
-        </a>
+        </Link>
       </div>
       
       <AlumniSection alumni={alumni}  year={2020} />

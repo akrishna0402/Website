@@ -6,8 +6,8 @@ import Header from "../components/Header";
 import navigation from "../data";
 import Footer from "../components/Footer";
 import TeamSection from "../components/Teams/TeamSection";
-import Title from "../components/Title";
 import Loader from "../components/loader/Loader";
+import Link from "next/link";
 
 function Team({ teams }) {
   // loader screen
@@ -30,13 +30,13 @@ function Team({ teams }) {
     <div className={s.container}>
       <Header items={navigation} navPosition="right" home={false} />
       <div className="flex justify-center align-center text-center ">
-        <a href="/team">
+        <Link href="/team">
           <h1 className=" text-blue-600 text-3xl font-semibold flex text-center items-center justify-center underline decoration-1 decoration-black underline-offset-8" >TEAM</h1>
-        </a>
+        </Link>
         <h1 className="text-2xl flex items-center justify-center mx-6"> / </h1>
-        <a href="/alumni">
+        <Link href="/alumni">
         <h1 className=" text-3xl font-semibold flex text-center items-center justify-center" >ALUMNI</h1>
-        </a>
+        </Link>
       </div>
       <TeamSection teams={teams} title="OFFICE BEARERS" year={4} />
       <TeamSection teams={teams} title="THIRD YEARS" year={3} />
