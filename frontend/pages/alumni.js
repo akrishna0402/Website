@@ -84,7 +84,7 @@ export default Alumni;
 
 
 export async function getStaticProps() {
-  const res = await fetch("http://127.0.0.1:8000/api/alumni/");
+  const res = await fetch("http://13.127.85.83/api/alumni/");
   const alumni = await res.json();
 
   return {
